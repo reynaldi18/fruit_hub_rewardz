@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Brandon_med.otf">
+            <string>BrandonGrotesque-Medium</string>
+        </array>
+        <array key="Brandon_reg.otf">
+            <string>BrandonGrotesque-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="fruit_hub" customModuleProvider="target">
+            <connections>
+                <outlet property="nameErrorLabel" destination="ENX-Mn-st8" id="4mr-cr-lDw"/>
+                <outlet property="nameTextField" destination="NNg-wU-WTq" id="bju-q6-HTi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbS-kF-2ah" userLabel="Top View">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="567.33333333333337"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_auth" translatesAutoresizingMaskIntoConstraints="NO" id="yhC-ig-aIX">
+                            <rect key="frame" x="44.666666666666657" y="143.66666666666663" width="304" height="280"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="280" id="BZ4-f0-Cvj"/>
+                                <constraint firstAttribute="width" constant="304" id="zg4-yD-A1R"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" name="PrimaryColor"/>
+                    <constraints>
+                        <constraint firstItem="yhC-ig-aIX" firstAttribute="centerY" secondItem="qbS-kF-2ah" secondAttribute="centerY" id="99j-u4-sQ0"/>
+                        <constraint firstItem="yhC-ig-aIX" firstAttribute="centerX" secondItem="qbS-kF-2ah" secondAttribute="centerX" id="Hqv-lX-qOZ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woe-as-mSq" userLabel="Bottom View">
+                    <rect key="frame" x="0.0" y="567.33333333333337" width="393" height="284.66666666666663"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your firstname?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4q-6z-8N6" userLabel="Title Label">
+                            <rect key="frame" x="16" y="55.999999999999993" width="361" height="28.666666666666664"/>
+                            <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="20"/>
+                            <color key="textColor" name="BlackColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBn-A4-Lcy">
+                            <rect key="frame" x="16" y="172.66666666666663" width="361" height="56"/>
+                            <color key="backgroundColor" name="PrimaryColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="ndW-z6-dNK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Start Ordering">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="startButtonPressed:" destination="-1" eventType="touchUpInside" id="zca-nG-Wa9"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LF4-be-7qC">
+                            <rect key="frame" x="16" y="100.66666666666663" width="361" height="56"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NNg-wU-WTq">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="56"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="tHg-KG-ZXP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name is required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENX-Mn-st8">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="0.0"/>
+                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="10"/>
+                                    <color key="textColor" red="1" green="0.3921568627" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="M4q-6z-8N6" firstAttribute="top" secondItem="woe-as-mSq" secondAttribute="top" constant="56" id="80h-nl-14Q"/>
+                        <constraint firstAttribute="trailing" secondItem="M4q-6z-8N6" secondAttribute="trailing" constant="16" id="O2S-8Q-2kO"/>
+                        <constraint firstAttribute="trailing" secondItem="LF4-be-7qC" secondAttribute="trailing" constant="16" id="QUM-PO-A42"/>
+                        <constraint firstItem="GBn-A4-Lcy" firstAttribute="leading" secondItem="woe-as-mSq" secondAttribute="leading" constant="16" id="SLK-kT-P66"/>
+                        <constraint firstAttribute="bottom" secondItem="GBn-A4-Lcy" secondAttribute="bottom" constant="56" id="Tit-Zi-rCS"/>
+                        <constraint firstItem="M4q-6z-8N6" firstAttribute="leading" secondItem="woe-as-mSq" secondAttribute="leading" constant="16" id="UkR-o4-s8E"/>
+                        <constraint firstItem="LF4-be-7qC" firstAttribute="leading" secondItem="woe-as-mSq" secondAttribute="leading" constant="16" id="ZRC-ct-JMR"/>
+                        <constraint firstAttribute="trailing" secondItem="GBn-A4-Lcy" secondAttribute="trailing" constant="16" id="dXs-le-0oK"/>
+                        <constraint firstItem="GBn-A4-Lcy" firstAttribute="top" secondItem="LF4-be-7qC" secondAttribute="bottom" constant="16" id="igk-3T-Cga"/>
+                        <constraint firstItem="LF4-be-7qC" firstAttribute="top" secondItem="M4q-6z-8N6" secondAttribute="bottom" constant="16" id="t8c-Px-zZf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qbS-kF-2ah" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3kC-MS-H8K"/>
+                <constraint firstAttribute="bottom" secondItem="woe-as-mSq" secondAttribute="bottom" id="4Ay-3Z-cEZ"/>
+                <constraint firstItem="woe-as-mSq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DWN-A5-jWX"/>
+                <constraint firstItem="woe-as-mSq" firstAttribute="top" secondItem="qbS-kF-2ah" secondAttribute="bottom" id="EtY-4E-6hc"/>
+                <constraint firstItem="qbS-kF-2ah" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LoX-3O-x78"/>
+                <constraint firstItem="qbS-kF-2ah" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="gEl-q1-oFC"/>
+                <constraint firstItem="woe-as-mSq" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="wRi-fM-hcs"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_auth" width="301" height="304"/>
+        <namedColor name="BlackColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryColor">
+            <color red="1" green="0.64313725490196083" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
